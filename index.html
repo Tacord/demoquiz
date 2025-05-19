@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>???</title>
+    </head>
+
+    <body style="background-color:#fbfafa;">
+        <center> <!-- Questions -->
+        <div class="questionbox">
+            <h1>1</h1>
+            <hr>
+            <h2 style="margin-left: 2rem; margin-right: 2rem;">What is the y-intercept of the function f(x)=x^3−4x?</h2>
+            <br>
+        </div>
+            <br>
+        <div class="questionbox">
+            <h1>2</h1>
+            <hr>
+            <h2 style="margin-left: 2rem; margin-right: 2rem;">A toy car starts from rest and accelerates at 4 m/s² for 1 second. How fast is it going after that time? (Use 𝑣 = 𝑢 + 𝑎 𝑡 v=u+at, where u = 0)</h2>
+            <br>
+        </div>
+            <br>
+        <div class="questionbox">
+            <h1>3</h1>
+            <hr>
+            <h2 style="margin-left: 2rem; margin-right: 2rem;">How many moles of H₂O are produced when 1 mole of O₂ reacts completely with hydrogen in the reaction: 2H​+O2​→2H2​O?</h2>
+            <br>
+        </div>
+            <br>
+        <div class="questionbox">
+            <h1>4</h1>
+            <hr>
+            <h2 style="margin-left: 2rem; margin-right: 2rem;">How many years passed between the passing of the Nuremberg Laws in 1935 and the start of World War II in 1939, plus the number of years from 1939 to the liberation of Auschwitz in 1945?</h2>
+            <br>
+        </div>
+            <br>
+        <div class="questionbox">
+            <h1>5</h1>
+            <hr>
+            <h2 style="margin-left: 2rem; margin-right: 2rem;">Do you remember this date?</h2>
+            <h2>(image goes here)</h2>
+            <br>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <h2>Enter the code based on your answers to the question</h2>
+        <form id="codeForm">
+            <input type="text" placeholder="1" class="codechild" maxlength="1" id="digit1" oninput="moveToNext(this, 'digit2')"/>
+            <input type="text" placeholder="2" class="codechild" maxlength="1" id="digit2" oninput="moveToNext(this, 'digit3')" />
+            <input type="text" placeholder="3" class="codechild" maxlength="1" id="digit3" oninput="moveToNext(this, 'digit4')" />
+            <input type="text" placeholder="4" class="codechild" maxlength="1" id="digit4" />
+        </form>
+        <br>
+        <script>
+
+            function moveToNext(currentInput, nextInputId) {
+                if (currentInput.value.length >= currentInput.maxLength) {
+                    document.getElementById(nextInputId).focus();
+                }
+            }
+
+            function checkCode() {
+                const digit1 = document.getElementById("digit1").value;
+                const digit2 = document.getElementById("digit2").value;
+                const digit3 = document.getElementById("digit3").value;
+                const digit4 = document.getElementById("digit4").value;
+                const submittedCode = digit1 + digit2 + digit3 + digit4;
+                const resultElement = document.getElementById("result");
+
+                if (submittedCode === "0228") {
+                    window.location.href = "success.html";
+                } else {
+                    resultElement.textContent = "Incorrect code!";
+                    document.getElementById("digit1").value = "";
+                    document.getElementById("digit2").value = "";
+                    document.getElementById("digit3").value = "";
+                    document.getElementById("digit4").value = "";
+                }
+            }
+        </script>
+        <h2 id="result"></h2>
+        <button onclick="checkCode()">Submit</button>
+        </center>
+    </body>
+</html>
+

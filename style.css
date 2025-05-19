@@ -1,0 +1,87 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+    font-family: SourGummy;
+    src: url('SourGummy.ttf');
+}
+
+h1 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: #000000;
+    font: 3rem SourGummy, sans-serif;
+    text-align: center;
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+
+    background-color:#f3f0f0;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    font: 2rem SourGummy, sans-serif;
+}
+
+.questionbox {
+  border-color: #e2e2e2;
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border-color: #e2e2e2;
+  border-width: 0.2rem;
+  margin: 0.5rem;
+  width: 6em;
+  height: 2.5em;
+  font: 3rem SourGummy, sans-serif;
+  border-radius: 2rem;
+}
+
+.codechild {
+  border-radius: 1rem;
+  
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border: 0.05rem solid #333;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  font: 5rem SourGummy, sans-serif;
+}
+
+.special {
+  margin-top: 2rem;
+  font-size: 2rem;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.special i {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input::placeholder {
+    opacity: 0.4;
+}
