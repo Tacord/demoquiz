@@ -44,9 +44,10 @@
         </div>
 
         <br>
-        <hr>
         <br>
-        <h2>Enter the code based on your answers to the question</h2>
+        <div class="questionbox"></div>
+            <h2>Enter the code based on your answers to the question</h2>
+        </div>
         <form id="codeForm">
             <input type="text" placeholder="1" class="codechild" maxlength="1" id="digit1" oninput="moveToNext(this, 'digit2')"/>
             <input type="text" placeholder="2" class="codechild" maxlength="1" id="digit2" oninput="moveToNext(this, 'digit3')" />
@@ -84,6 +85,7 @@
         <h2 id="result"></h2>
         <button onclick="checkCode()">Submit</button>
         </center>
+        <br><br><br><br><br><br><br><br><br>
     </body>
 </html>
 
